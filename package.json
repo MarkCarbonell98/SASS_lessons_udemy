@@ -1,0 +1,22 @@
+{
+  "name": "css_transform_animations",
+  "version": "1.0.0",
+  "description": "just to learn some css",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarkCarbonell98/SASS_lessons_udemy.git"
+  },
+  "author": "Marcos Carbonell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarkCarbonell98/SASS_lessons_udemy/issues"
+  },
+  "homepage": "https://github.com/MarkCarbonell98/SASS_lessons_udemy#readme",
+  "dependencies": {
+    "pleeease": "^4.3.0"
+  }
+}
