@@ -93,3 +93,39 @@ h1 {
 }
 
 /* google css prefixers */
+/* pleeease */
+/* transitions duration, property, timing-function and delay */
+
+
+
+  /* neuralnetworks and deep learning */
+  /* deep learning and deep networks */
+  
+  .box {
+      background: #9b69b6;
+      height: 100px;
+      width: 100px;
+      line-height: 100px;
+      text-align: center;
+      font-size: 17px;
+      border-radius: 20px;
+  }
+
+  .box:hover {
+      background: #e74c3c;
+      transform-origin: top left;
+      transform: scale(2);
+      opacity: 0.3;
+      border-radius: 50px;
+      /* multiple transition delays separated by a comma just like with transition-property */
+  }
+
+  .animated {
+      transition-duration: 1s, 1s;
+      /* sets the property to be transformed */
+      transition-property: background-color, border-radius;
+      transition-delay: 5s, 2s;
+  }
+
+
+
