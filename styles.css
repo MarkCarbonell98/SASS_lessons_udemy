@@ -1,0 +1,48 @@
+#btn1:active {
+    background-color: purple;
+}
+#btn2:hover {
+    background-color: green;
+}
+#btn3:focus {
+    background-color: orange;
+}
+
+h1 {
+    text-align: center;
+}
+
+.button-container {
+    text-align: center;
+}
+
+.btn {
+    padding: 3em 12em;
+    border: none;
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    box-shadow: 0 8px #d38600;
+    position: relative;
+}
+
+.btn:hover {
+    box-shadow: 0 6px #d38600;
+    top: 2px;
+}
+
+.btn:active {
+    box-shadow: 0 3px #d38600;
+    top: 4px;
+}
+
+.btn:focus {
+    border: none;
+}
+
+/* introduction to transform  */
+/* lets you move warp, rotate and scale elements  */
+
