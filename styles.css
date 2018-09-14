@@ -68,7 +68,7 @@
     margin: 30px;
 }
 
-body {
+/* body {
     margin: 0 0 0 0;
     background-color: #2c3e50;
     animation-name: animate-sky;
@@ -76,7 +76,7 @@ body {
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-delay: 0;
-  }
+  } */
   
   .grass {
     background: green;
@@ -96,7 +96,7 @@ body {
     animation-iteration-count: infinite;
   }
 
-  @keyframes animate-sky {
+  /* @keyframes animate-sky {
     10% {
         background-color: pink;
     } 
@@ -111,8 +111,9 @@ body {
     }
     100% {
         background-color: #2c3e50;
+        animation: name duration timing-function delay iteration-count direction fill-mode;
     }
-}
+} */
 
 /* @keyframes animate-sun {
     0% {
@@ -160,6 +161,37 @@ body {
     }
 }
 
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+h1 {
+    text-align: center;
+}
+
+.loader {
+    margin: auto;
+    background-color: white;
+    height: 200px;
+    width: 200px;
+    border: solid 20px;
+    border-top-color: cyan;
+    border-bottom-color: purple;
+    border-left-color: gainsboro;
+    border-right-color: gainsboro;
+    border-radius: 180px;
+    animation: rotateIcon 2s ease-in-out 0s infinite  /*fill-mode*/;
+}
+
+@keyframes rotateIcon {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
 
 
 
