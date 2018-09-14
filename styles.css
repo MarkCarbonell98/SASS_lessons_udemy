@@ -1,100 +1,164 @@
-@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
-@import url('https://fonts.googleapis.com/css?family=Raleway:200');
-
-h1 {
-  text-align: center;
-  font-family: Raleway;
-  color: #34495e;
-}
-.container {
-  display: flex;
-  justify-content: center;
-}
-
-
-div.item {
-  position: relative;
-  float: left;
-  overflow: hidden;
-  margin: 10px 1%;
-  min-width: 220px;
-  max-width: 310px;
-  width: 100%;
-  background: #000000;
-  text-align: center;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+@keyframes rainbowtext {
+    0% {
+        color: red;
+        font-size: 20px;
+    } 
+    25% {
+        color: orange;
+    }
+    50% {
+        color: yellow;
+        font-size: 40px;
+        transform: translate(200px, 100px)
+    }
+    75% {
+        color: green;
+    }
+    85% {
+        color: blue
+    }
+    100% {
+        color: purple;
+        font-size: 20px;
+    }
 }
 
-div.item * {
-  box-sizing: border-box;
+.animate-me {
+    /* identify the animation */
+    animation-name: rainbowtext;
+    /* define how long will it take the animation to complete once */
+    animation-duration: 3s;
+    /* define the acceleration pattern of the animation */
+    animation-timing-function: ease-in-out;
+    /* how much time has to pass for the animation to start */
+    animation-delay: 1s;
+    /* more complex animations */
+    /* how many times the animation will run once */
+    animation-iteration-count: infinite; 
+    /* specifies how an animation should apply styles before and after the animation */
+    /* determines if the styles should prevail at the beggining or the end of the animation or both */
+    animation-fill-mode: forwards;
+    /* determines the playback path of the animation, like make it in reverse */
+    animation-direction: alternate;
+    /* works to stop or run the animation depending on 
+    different interactions with the user (like hover) */
+    animation-play-state: running;
 }
 
-div.item img {
-  max-width: 100%;
-  vertical-align: top;
-  height: 210px;
+@keyframes jiggle {
+    48%, 62% {
+        transform: scale(1,1);
+    }
+    50% {
+        transform: scale(1.1, .9);
+    }
+    56% {
+        transform: scale(0.9, 1.1) translate(0, -5px);
+    } 
+    59% {
+        transform: scale(1.1, 0.9) translate(0, -3px);
+    }
+} 
+
+.btn-anim {
+    animation-name: jiggle;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    margin: 30px;
 }
 
-div.item i {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  border-radius: 50%;
-  font-size: 34px;
-  color: #000000;
-  width: 60px;
-  height: 60px;
-  line-height: 60px;
-  background: #ffffff;
-  text-align: center;
-  align-content: center;
-  transform: translate(-50%, -50%) scale(0);
-  transition: transform 0.75s 0ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+body {
+    margin: 0 0 0 0;
+    background-color: #2c3e50;
+    animation-name: animate-sky;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 0;
+  }
+  
+  .grass {
+    background: green;
+    height: 900px;
+    width: 100%;
+    position: absolute;
+  }
+  
+  .sun {
+    background: #f1c40f;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    animation-name: animateSunDefinitive;
+    animation-timing-function: linear;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes animate-sky {
+    10% {
+        background-color: pink;
+    } 
+    30% {
+        background-color: skyblue;
+    }
+    70% {
+        background-color: skyblue;
+    }
+    90% {
+        background-color: pink;
+    }
+    100% {
+        background-color: #2c3e50;
+    }
 }
 
-div.item a {
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  position: absolute;
-}
+/* @keyframes animate-sun {
+    0% {
+        background-color: orangered;
+        transform: translate(-200px, 200px);
+    }
+    25% {
+        background-color: yellow;
+        transform: translate(400px, 0);
+    }
+    50% {
+        transform: translate(850px, -50px);
+    }
+    
+    75% {
+        background-color: yellow;
+        transform: translate(1250px, 0);
+    }
+    100% {
+        background-color: red;
+        transform: translate(1950px, 200px);
+    }
+} */
 
-div.item.blue {
-  background-color: #34495e;
-}
-div.item.blue i {
-  color: #34495e;
-}
-div.item.red {
-  background-color: #e74c3c;
-}
-div.item.red i {
-  color: #e74c3c;
-}
+@keyframes animateSunDefinitive {
+    0% {
+        background-color: orangered;
+        transform: translate(-200px, 200px);
+    }
 
-div.item.green {
-  background-color: #16a085;
+    25% {
+        background-color: yellow;
+        transform: translate(330px, 0px);
+    }
+    50% {
+        transform: translate(860px, -50px);
+    }
+    75% {
+        background-color: yellow;
+        transform: translate(1390px, 0px);
+    }
+    100% {
+        background-color: red;
+        transform: translate(1920px, 200px);
+    }
 }
-div.item.green i {
-  color: #16a085;
-}
-
-div.item:hover img {
-    opacity: 0.3;
-    filter: grayscale(100%);
-
-}
-
-div.item * {
-    transition: all 0.35s ease-in-out;
-}
-
-div.item:hover i {
-    transform: translate(-50%, -50%) scale(1);
-    transition: transform 300ms 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
 
 
 
