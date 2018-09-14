@@ -172,16 +172,18 @@ h1 {
 
 .loader {
     margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
     background-color: white;
     height: 200px;
     width: 200px;
     border: solid 20px;
     border-top-color: cyan;
-    border-bottom-color: purple;
+    border-bottom-color: cyan;
     border-left-color: gainsboro;
     border-right-color: gainsboro;
     border-radius: 180px;
-    animation: rotateIcon 2s ease-in-out 0s infinite  /*fill-mode*/;
+    animation: colouredRotateIcon 2s ease-in-out 0s infinite  /*fill-mode*/;
 }
 
 @keyframes rotateIcon {
@@ -191,6 +193,38 @@ h1 {
     100% {
         transform: rotate(360deg);
     }
+}
+
+@keyframes colouredRotateIcon {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        border-top-color: red;
+        border-bottom-color: red;
+    }
+    75% {
+        border-top-color: red;
+        border-bottom-color: red;
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.text {
+    opacity: 0;
+    text-align: center;
+    animation: appear 1s 3s forwards;
 }
 
 
