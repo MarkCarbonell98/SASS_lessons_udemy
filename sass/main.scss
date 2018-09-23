@@ -1,0 +1,53 @@
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'abstracts/functions';
+@import 'abstracts/typography';
+
+@import 'base/base';
+@import 'base/animations';
+@import 'base/utilities';
+
+@import 'pages/home';
+
+@import './layout/header';
+@import './layout/grid'; 
+@import './layout/navigation';
+
+@import './components/button';
+@import './components/composition';
+@import './components/feature-box';
+@import './components/card';
+@import './components/story';
+@import './components/bg-video';
+@import './components/form';
+@import './components/footer';
+@import './components/popup';
+// remember the 7 in 1 rule of css
+// /*
+// COLORS:
+// think => build => architect
+// think {
+//     Modular components
+//     held the layout
+//     re usable 
+//     independent
+// }
+
+// architect {
+//     7-1 pattern 
+//     7 different folder for partial sass files
+//     1 main sass file to import the rest to (compiled stylesheet)
+    
+// }
+
+// BEM BLOCK ELEMENT MODIFIER
+// block__element--modifier
+// block = component meaningful on its own 
+// element = part of block, no standalone meaning
+// modifier = different version of a block element
+// */
+
+
+
+
+

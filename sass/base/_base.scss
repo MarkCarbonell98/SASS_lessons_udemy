@@ -1,0 +1,45 @@
+*, 
+*::after, 
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+//order: base + typography > general layout + grid >page layout > components
+
+/* font family must be included in body */
+html {
+    /* default font size are 60px */
+    /* rems will be calculated using this font-size as base */
+    font-size: 62.5%;
+    /* ems on the other are calculated using the parents elements font size as base */
+
+    //1rem = 10px; 10px/16px = 62.5%
+    @include respond(tab-land) { //1200
+        font-size: 56.25%; //1rem = 9px; 9/16 = 56.25%;
+    }
+    
+    @include respond(tab-port) { //900
+        font-size: 50%; //1rem = 8px; 8/16 = 50%;
+    }
+    
+    @include respond(phone) { //600
+        font-size: 30%;
+    }
+
+    @include respond(desktop) { //1200 - 1800
+        font-size: 75%; //1rem = 12px; 12/16 = 3/4
+    }
+
+}
+
+// these variables are only specified in the body tag
+body {
+    box-sizing: border-box;
+    padding: 3rem;
+
+    @include respond(tab-port) {
+        padding: 0;
+    }
+}
